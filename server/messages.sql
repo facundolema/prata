@@ -1,0 +1,10 @@
+CREATE TABLE message (
+id INTEGER PRIMARY KEY,
+sender INTEGER NOT NULL,
+receiver INTEGER NOT NULL,
+content BLOB NOT NULL,
+type TEXT NOT NULL,
+timestamp TEXT NOT NULL,
+status TEXT NOT NULL,
+FOREIGN KEY (sender) REFERENCES user(id),
+FOREIGN KEY (receiver) REFERENCES user(id) );
